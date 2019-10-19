@@ -14,6 +14,9 @@ bot.on("message",msg =>{
 		}
 	}else if(text=="haftalik" || text == "0"){
 		hafta = -1;
+	}else{
+		hafta = -2;
+
 	}
 	
 	var guruh_408 = 
@@ -82,10 +85,18 @@ bot.on("message",msg =>{
 			}	
 		}
 		
-	}else{
+	}else if (hafta!=-2){
 		for (var i = 0; i < guruh_408[hafta].length; i++) {
 			darsjadval = darsjadval + guruh_408[hafta][i];
 		}	
+	}else{
+		darsjadval = 
+		
+			"Bugungi dars jadvalni ko'rish ushun 1 yoki bugun\n"+
+			"Ertangi dars jadvalni ko'rish ushun 2 yoki ertaga\n"+
+			"Haftalik dars jadvalni ko'rish ushun 0 yoki haftalik\n"+
+			" yozing. Taklif va muommalar uchun @YMusurmanov"
+		
 	}
 	
 	
