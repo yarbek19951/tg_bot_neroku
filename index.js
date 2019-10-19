@@ -12,9 +12,10 @@ bot.on("message",msg =>{
 		if(hafta==7){
 			hafta=0;
 		}
-	}else if(text=="haftalik" || text == "0")(
+	}else if(text=="haftalik" || text == "0"){
 		hafta = -1;
-	)
+	}
+	
 	var guruh_408 = 
 	[
 		[
@@ -64,11 +65,20 @@ bot.on("message",msg =>{
 		],
 		
 	]
+	var haftaKunlari = [
+		"Dushanba",
+		"Seshanba",
+		"Chorshanba",
+		"Payshanba",
+		"Juma",
+		"Shanba"
+	]
 	var darsjadval = "";
 	if(hafta == -1){
-		for (var i = 0; i < guruh_408.length; i++) {
+		for (var i = 1; i < guruh_408.length; i++) {
+			darsjadval = "\n"+darsjadval +"\n"+haftaKunlari[i-1]+"\n";
 			for (var j = 0; j < guruh_408[i].length; j++) {
-				darsjadval = darsjadval + guruh_408[hafta][j];
+				darsjadval = darsjadval + guruh_408[i][j];
 			}	
 		}
 		
@@ -77,6 +87,7 @@ bot.on("message",msg =>{
 			darsjadval = darsjadval + guruh_408[hafta][i];
 		}	
 	}
+	
 	
 	bot.sendMessage(msg.chat.id,darsjadval )
 })
