@@ -70,11 +70,11 @@ bot.on("message",msg =>{
 	]
 	var haftaKunlari = [
 		"*Dushanba*",
-		"Seshanba",
-		"Chorshanba",
-		"Payshanba",
-		"Juma",
-		"Shanba"
+		"*Seshanba*",
+		"*Chorshanba*",
+		"*Payshanba*",
+		"*Juma*",
+		"*Shanb*a"
 	]
 	var darsjadval = "";
 	if(hafta == -1){
