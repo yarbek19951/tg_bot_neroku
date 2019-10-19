@@ -66,7 +66,7 @@ bot.on("message",msg =>{
 		
 	]
 	var haftaKunlari = [
-		"Dushanba",
+		"<b>Dushanba</b>",
 		"Seshanba",
 		"Chorshanba",
 		"Payshanba",
