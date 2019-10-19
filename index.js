@@ -8,12 +8,13 @@ bot.on("message",msg =>{
 	if(text=="bugun" || text == "1"){
 		hafta = day.getDay() 
 	}else if(text=="ertaga" || text == "2"){
-
 		hafta = day.getDay()+1
 		if(hafta==7){
 			hafta=0;
 		}
-	}
+	}else if(text=="haftalik" || text == "0")(
+		hafta = -1;
+	)
 	var guruh_408 = 
 	[
 		[
@@ -64,8 +65,18 @@ bot.on("message",msg =>{
 		
 	]
 	var darsjadval = "";
-	for (var i = 0; i < guruh_408[hafta].length; i++) {
-		darsjadval = darsjadval + guruh_408[hafta][i];
+	if(hafta == -1){
+		for (var i = 0; i < guruh_408.length; i++) {
+			for (var j = 0; j < guruh_408[i].length; j++) {
+				darsjadval = darsjadval + guruh_408[hafta][j];
+			}	
+		}
+		
+	}else{
+		for (var i = 0; i < guruh_408[hafta].length; i++) {
+			darsjadval = darsjadval + guruh_408[hafta][i];
+		}	
 	}
+	
 	bot.sendMessage(msg.chat.id,darsjadval )
 })
