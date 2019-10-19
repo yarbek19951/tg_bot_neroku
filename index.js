@@ -76,7 +76,7 @@ bot.on("message",msg =>{
 	var darsjadval = "";
 	if(hafta == -1){
 		for (var i = 1; i < guruh_408.length; i++) {
-			darsjadval = "\n"+darsjadval +"\n"+haftaKunlari[i-1]+"\n";
+			darsjadval = "\n"+darsjadval +"\n**"+haftaKunlari[i-1]+"**\n";
 			for (var j = 0; j < guruh_408[i].length; j++) {
 				darsjadval = darsjadval + guruh_408[i][j];
 			}	
