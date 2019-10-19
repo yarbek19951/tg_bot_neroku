@@ -66,7 +66,7 @@ bot.on("message",msg =>{
 		
 	]
 	var haftaKunlari = [
-		"<b>Dushanba</b>",
+		"*Dushanba*",
 		"Seshanba",
 		"Chorshanba",
 		"Payshanba",
@@ -89,5 +89,5 @@ bot.on("message",msg =>{
 	}
 	
 	
-	bot.sendMessage(msg.chat.id,darsjadval )
+	bot.sendMessage(msg.chat.id,darsjadval,{parse_mode: "Markdown"} )
 })
